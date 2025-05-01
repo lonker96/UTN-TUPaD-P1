@@ -162,10 +162,12 @@ del año es y qué día es. El programa deberá utilizar esa información para i
 si el usuario se encuentra en otoño, invierno, primavera o verano. 
 
 from datetime import datetime
+
 emisferio = input("Ingrese el emisferio Sur = S / Norte = N: ")
 fecha = input("Ingrese la fecha actual usando el siguiente formato: DD-MM-YYYY: ")
 formato = "%d-%m-%Y"
 fecha = datetime.strptime(fecha, formato)
+
 if emisferio == 'S':
     if fecha >= datetime.strptime("21-12-2024", formato) and fecha <= datetime.strptime("20-03-2025", formato):
         print("estas en Verano ")
